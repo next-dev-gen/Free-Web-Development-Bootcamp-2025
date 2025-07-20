@@ -1,0 +1,40 @@
+/* হিরো সেকশনের ব্যাকগ্রাউন্ড ইমেজ ও স্টাইল */
+#hero {
+    background-image: url('./bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ইমেজের উচ্চতা */
+img {
+    height: 400px;
+}
+
+/* সাবটাইটেলের রঙ */
+#sub-title {
+    color: yellow;
+}
+
+/* মেইন টাইটেলের রঙ, ফন্ট সাইজ ও মার্জিন */
+#title {
+    color: white;
+    font-size: 60px;
+    margin-right: 90px;
+}
+
+/* বাটনের ডিজাইন */
+.btn {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #EE284B;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
