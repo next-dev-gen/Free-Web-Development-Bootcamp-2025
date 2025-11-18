@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Welcome <span id="name"></span></h1>
+
+    <div>
+        <h1>Total Count: <span id="count">0</span></h1>
+        <button onclick="addFunction(5)">Add</button>
+        <button onclick="subFunction(5)">Sub</button>
+    </div>
+    
+    <script>
+        // get user name by prompt
+        const name = prompt("Enter your name:");
+        alert("Hello, " + name + "! Welcome to the site.");
+        const name_area = document.getElementById("name");
+        name_area.innerHTML = name;
+
+        // counter functionality
+        const count_area = document.getElementById("count");
+        let count = parseFloat(count_area.innerHTML);
+        if(count == 0){
+            const getCount = localStorage.getItem("count");
+            count = parseFloat(getCount) || 0;
+        }
+        count_area.innerHTML = count;
+
+        const addFunction = (number) =>{
+            count = count + number;
+            // if the count is 100 or more, do not increase it further
+            count_area.innerHTML = count;
+            localStorage.setItem("count", count);
+        }
+
+        const subFunction = (number) =>{
+            count = count - number;
+            // to avoid negative count then you do anything
+            count_area.innerHTML = count;
+            localStorage.setItem("count", count);
+        }
+    </script>
+</body>
+</html>
